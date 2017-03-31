@@ -1,0 +1,156 @@
+/**
+  *
+  * 首页
+  */
+body{
+ 	background-color: #F8EFD9;
+ } 
+ /**
+  *
+  * 头部图片，logo，文字
+  */
+img:nth-of-type(1){
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left:0;
+}
+img:nth-of-type(2){
+	display: block;
+	width: 1.75rem;
+	height: 2.42rem;
+	position: absolute;
+	top: 0.9rem;
+	left:1.1rem;
+}
+#app>span:nth-of-type(1){
+	display: block;
+	width: 100%;
+	height: 1.1rem;
+	font-family: PingFangSC-Light;
+	font-size: 0.8rem;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	text-align: center;
+	position: absolute;
+	top: 7.25rem;
+}
+#app>span:nth-of-type(2){
+	display: block;
+	width: 100%;
+	height: 1.1rem;
+	font-family: PingFangSC-Regular;
+	font-size: 0.8rem;
+	color: #FFFDC6;
+	letter-spacing: 0;
+	text-align: center;
+	position: absolute;
+	top: 8.25rem;
+}
+/**
+  *
+  * 中间按钮
+  */ 
+button{
+	display: block;
+	width: 16.75rem;
+	height: 2.5rem;
+	border-radius: 8px;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	position: absolute;
+}
+button:nth-of-type(1){
+	background: #E25B49;
+	box-shadow: 0 0.1rem 0 0 #C8412F;
+	top: 19.65rem;
+}
+button:nth-of-type(2){
+	background: #76A9E2;
+	box-shadow: 0 0.1rem 0 0 #5996D9;
+	top: 22.9rem;
+}
+button >a{
+	display: inline-block;
+	width: 100%;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	font-family: PingFangSC-Regular;
+	font-size: 0.8rem;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	text-align: center;
+	position: relative;
+}
+button>a>b{
+	display: inline-block;
+	background: url(../img/arrowRight.png) no-repeat;
+	background-size: contain;
+	width: 0.705rem;
+	height: 0.705rem;
+	position: absolute;
+	top: 0.9rem;
+	right: 1rem;
+}
+/**
+  *
+  * 底部列表文字
+  */ 
+ul{
+	width: 16.75rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	position: absolute;
+	top: 26.75rem;
+}
+li{
+	width: 100%;
+	border-radius: 4px;
+	margin-bottom: 0.5rem;
+	overflow: hidden;
+}
+ul>li>div:nth-of-type(1){
+	display: block;
+	width: 100%;
+	height: 2rem;
+	line-height: 2rem;
+	padding-left: 1rem;
+	background: #FFFFFF;
+	font-family: PingFangSC-Regular;
+	font-size: 0.6rem;
+	color: #000000;
+	position: relative;
+}
+ul>li>div:nth-of-type(1)>b{
+	display: inline-block;
+	width: 0.6rem;
+	height: 0.45rem;
+	background: url(../img/icon_arrow_down.png) no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: 0.75rem;
+	right: 1rem;
+}
+ul>li>div:nth-of-type(2){
+	width: 100%;
+	background: rgba(255,255,255,.5);
+	overflow: hidden;
+	padding: 0.7rem 1rem;
+	display: none;
+}
+ul>li>div:nth-of-type(2)>span{
+	/* display: block; */
+	opacity: 0.69;
+	font-family: PingFangSC-Light;
+	font-size: 0.5rem;
+	color: #000000;
+	line-height: 0.8rem;
+	word-wrap: break-word;
+}
+ul>li>div:nth-of-type(2).active{
+	display: block;
+}
+ul>li>div:nth-of-type(1)>b.arrowActive{
+	transform:rotate(180deg);
+}

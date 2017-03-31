@@ -1,0 +1,389 @@
+body{
+	background: #F0F0F0;
+	font-family: PingFangSC-Regular;
+}
+/**
+* 头部  我要办卡
+*/
+#newCard>div:nth-of-type(1){
+	width: 100%;
+	height: 2.0rem;
+	background: #fff;
+}
+#newCard>div:nth-of-type(1)>span{
+	display: block;
+	float: left;
+	width: 100%;
+	text-align: center;
+	height: 2.0rem;
+	line-height: 2.0rem;
+	font-size: 0.8rem;
+	color: #000000;
+	letter-spacing: 0;
+}
+#newCard>div:nth-of-type(1)>a{
+	display: block;
+	float: right;
+	height: 2.0rem;
+	line-height: 2.0rem;
+	font-size: 0.8rem;
+	color: #DF4531;
+	letter-spacing: 0;
+	margin-right: 1.0rem;
+	margin-top: -2.0rem
+}
+/**
+* 中部  信息填写
+*/
+#newCard>div:nth-of-type(2){
+	width: 100%;
+	height:20.5rem;
+	background: url(../img/bg_newcard.png) no-repeat;
+	background-size: 100% auto;
+}
+#newCard>div:nth-of-type(2)>span:nth-of-type(1),
+#newCard>div:nth-of-type(2)>span:nth-of-type(2){
+	display: inline-block;
+	width: 100%;
+	font-size: 0.7rem;
+	color: #FFFFFF;
+	letter-spacing: 0;
+}
+#newCard>div:nth-of-type(2)>span:nth-of-type(1){	
+	padding-left: 3.3rem;
+	margin-top: 1.3rem;
+	font-family: PingFangSC-Light;
+}
+#newCard>div:nth-of-type(2)>span:nth-of-type(2){
+	padding-left: 3.15rem;
+	margin-top: 2.4rem;
+}
+/* 表单 */
+table#msg{
+	width: 100%;
+	margin-top: 1.1rem;
+	font-size: 0.7rem;
+	color: #000000;
+	letter-spacing: 0;
+}
+tr{
+	width: 100%;
+	height: 2.55rem;
+	border-bottom: 1px solid #ECECEC;
+}
+#msg tr>td span{
+	font-family: DINAlternate-Bold;
+	font-size: 0.8rem;
+	color: #DF4531;
+	letter-spacing: 0;
+}
+/* 第一行 500 字体大小*/
+#msg tr:nth-of-type(1)>td>div>span:nth-of-type(1){
+	font-size: 0.7rem;
+}
+/* 表头 */
+tr>td:nth-of-type(1){
+	width: 4.9rem;
+	height: 2.4rem;
+	padding-left: 1rem;
+}
+/* 第一二三四行的最后一列 */
+#msg tr:nth-of-type(1)>td:nth-of-type(3),
+#msg tr:nth-of-type(2)>td:nth-of-type(3),
+#msg tr:nth-of-type(3)>td:nth-of-type(2),
+#msg tr:nth-of-type(4)>td:nth-of-type(2){
+	text-align: right;
+	padding-right: 1.05rem;
+}
+#msg tr:nth-of-type(1)>td:nth-of-type(2)>div,
+#msg tr:nth-of-type(2)>td:nth-of-type(2)>button,
+#msg tr:nth-of-type(2)>td:nth-of-type(2)>span{
+	height: 1.8rem;
+	line-height: 1.7rem;
+	background: #FFFFFF;
+	border: .5px solid #E5E5E5;
+	border-radius: 2px;
+	text-align: center;
+}
+/* 第一行的第二列 */
+#msg tr:nth-of-type(1)>td:nth-of-type(2)>div{
+	width: 7.8rem;
+}
+/* 第二行的第二列 */
+#msg tr:nth-of-type(2)>td:nth-of-type(2)>button{
+	float: left;
+	display: block;
+	width: 1.8rem;
+}
+#msg tr:nth-of-type(2)>td:nth-of-type(2)>span{
+	float: left;
+	display: block;
+	width: 3.2rem;
+	border-radius: 2px;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+/*配送地址*/
+#msg tr:nth-of-type(4)>td:nth-of-type(2)>div{
+	font-size: 0.7rem;
+	color: rgba(0,0,0,0.4);
+	letter-spacing: 0;
+	float: left;
+}
+#msg tr:nth-of-type(4)>td:nth-of-type(2)>b{
+	display: block;
+	background: url(../img/icon_arrow-right.png) no-repeat;
+	background-size: auto 100%;
+	width: 0.45rem;
+	height: 0.705rem;
+	float: right;
+	margin-top: 0.15rem;
+}
+/* 勾选“我已阅读购卡须知” */
+#newCard>div:nth-of-type(2)>div{
+	width: 100%;
+	height: 3.0rem;
+	position: relative;
+}
+/* 隐藏checkbox */
+#newCard>div:nth-of-type(2)>div>input{
+	position: absolute;
+	visibility: hidden;
+}
+#newCard>div:nth-of-type(2)>div>input+label{
+	float: left;
+	display: inline-block;
+	margin-left: 1.0rem;
+	margin-top: 0.95rem;
+	background: url(../img/icon_check_false.png);
+	width: 0.9rem;
+	height: 0.9rem;
+	background-size: 100% 100%;
+}
+#newCard>div:nth-of-type(2)>div>input:checked+label{
+	background: url(../img/icon_check_true.png);
+	background-size: 100% 100%;
+}
+/*文字  我已阅读并同意*/
+#newCard>div:nth-of-type(2)>div>span:nth-of-type(1){
+	float: left;
+	display: block;
+	margin-left: 0.5rem;
+	margin-top: 1rem;
+	font-size: 0.6rem;
+	color: #000000;
+	letter-spacing: 0;
+}
+#newCard>div:nth-of-type(2)>div>span:nth-of-type(2){
+	float: left;
+	display: block;
+	margin-top: 1rem;
+	font-size: 0.6rem;
+	color: #E56352;
+}
+
+/* 购卡须知  文字内容 */
+#newCard>div:nth-of-type(3){
+	width: 100%;
+	padding:0.75rem 1.15rem 0.9rem 0.8rem;
+	margin-bottom: 2.5rem;
+}
+#newCard>div:nth-of-type(3)>span{
+	display: block;
+	width: 100%;
+	opacity: 0.4;
+	font-family: PingFangSC-Light;
+	font-size: 0.5rem;
+	color: #000000;
+}
+#newCard>div:nth-of-type(3)>div{
+	width: 100%;
+	/* height: 1.0rem; */
+	margin-top: 1.15rem;
+}
+#newCard>div:nth-of-type(3)>div>img{
+	display: inline-block;
+	width: 1.05rem;
+	height: 0.875rem;
+	vertical-align: middle;
+	margin-left: 4.85rem;
+}
+#newCard>div:nth-of-type(3)>div>span{
+	display: inline-block;
+	font-size: 0.6rem;
+	color: #000000;
+	letter-spacing: 0;
+	width: 5.6rem;
+	height: 0.95rem;
+	line-height: 0.95rem;
+	opacity: 0.4;
+}
+
+/* 支付 */
+#newCard>div:nth-of-type(4){
+	width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+#newCard>div:nth-of-type(4)>div{
+	float: left;
+	width: 50%;
+	height: 2.5rem;
+	font-size: 0.7rem;
+	background: #fff;
+	color: #000000;
+	letter-spacing: 0;
+	padding-left: 1.05rem;
+	padding-top: 0.525rem;
+}
+#newCard>div:nth-of-type(4)>div>span{
+	font-family: DINAlternate-Bold;
+	font-size: 1.15rem;
+	color: #E04531;
+	letter-spacing: 0;
+}
+#newCard>div:nth-of-type(4)>span{
+	display: block;
+	float: left;
+	width: 50%;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	text-align: center;
+	background: #DF4531;
+	font-family: PingFangSC-Semibold;
+	font-size: 0.8rem;
+	color: #FFFFFF;
+	letter-spacing: 0;
+}
+
+/* 配送地址填写 */
+
+#addressMsg{
+	width: 100%;
+	height: 100%;
+	background: #F0F0F0;
+}
+/* 头部 */
+#addressMsg>div:nth-of-type(1){
+	width: 100%;
+	height: 2.0rem;
+	background: #fff;
+	position: relative;
+	border-bottom: .5px solid #ECECEC;
+}
+#addressMsg>div:nth-of-type(1)>div{
+	position: absolute;
+	width: 2.5rem;
+	height: 2.0rem;
+	line-height:2.0rem;
+	left: 1.0rem;
+}
+#addressMsg>div:nth-of-type(1)>div>img{
+	width: 0.45rem;
+	height: 0.7rem;
+	vertical-align: middle;
+}
+#addressMsg>div:nth-of-type(1)>div>span{
+	display: inline-block;
+	font-size: 0.8rem;
+	color: #DF4531;
+	letter-spacing: 0;
+}
+#addressMsg>div:nth-of-type(1)>span{
+	display: block;
+	height: 2.0rem;
+	line-height:2.0rem;
+	font-size: 0.8rem;
+	width: 100%;
+	text-align: center;
+}
+#addressMsg>span{
+	display: block;
+	width: 100%;
+	height: 0.5rem;
+	background: #fff;
+}
+#addressMsg>span:nth-of-type(2){
+	height: 0.9rem;
+}
+/* 中部 个人地址信息填写 */
+table#address{
+	width: 100%;
+	height: 10.1rem;
+	background: #fff;
+	font-size: 0.7rem;
+	color: #000000;
+}
+#address tr{
+	border-bottom: 0.5px solid #ECECEC;
+}
+/* 表头 */
+#address tr:nth-of-type(4),
+#address tr:nth-of-type(3){
+	border: none;
+}
+#address tr:nth-of-type(3)>td:nth-of-type(2),
+#address tr:nth-of-type(3)>td:nth-of-type(3),
+#address tr:nth-of-type(3)>td:nth-of-type(4){
+	border-bottom: 1px solid #ECECEC;
+}
+
+#address tr>td:nth-of-type(2){	
+	padding-left: 0.3rem;
+}
+input{
+	width: 10.0rem;
+	font-family: PingFangSC-Light !important;
+	border: none !important;
+	padding: 0 !important;
+}
+select,
+#address tr:nth-of-type(3)>td:nth-of-type(3),
+#address tr:nth-of-type(3)>td:nth-of-type(4){
+	border: none !important;
+	width: 3.5rem;
+}
+#address tr:nth-of-type(3)>td:nth-of-type(3){
+	padding-right: 1.25rem;
+}
+#address tr:nth-of-type(3)>td:nth-of-type(4){
+	padding-right: 1.65rem;
+}
+/* 确定按钮 */
+#addressMsg button{
+	display: block;
+	width: 16.75rem;
+	height: 2.5rem;
+	margin: 1.55rem auto;
+	background: #DE3F2A;
+	border: 1px solid #DE3F2A;
+	border-radius: 4px;
+	font-family: PingFangSC-Semibold;
+	font-size: 0.8rem;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	}
+
+
+/* 信息填写提示 */
+#buyCard>div.wrongmsg{
+	width: 10.75rem;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	text-align: center;
+	background: #494949;
+	border-radius: 0.2rem;
+	font-size: 0.8rem;
+	color: #ffffff;
+	position: fixed;
+	left: 3.5rem;
+	bottom: -2.5rem;
+	opacity: 0;
+	transition: opacity .2s,bottom .2s;
+}
+.msgAppear{
+	opacity: 1 !important;
+	bottom: 10.0rem !important;
+}

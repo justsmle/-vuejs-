@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>首页</title>
+    <link href="css/font.css" rel="stylesheet" >
+    <link href="css/base.css" rel="stylesheet" >
+    <link href="css/responsive.css" rel="stylesheet" >
+    <link href="css/index.css" rel="stylesheet" >
+</head>
+<body>
+	<div id="app">
+	<!-- 中石油logo  -->
+		<img class="index_bgImg" src="./img/index_bgImg.png">
+	<!-- 中石油背景图  -->
+		<img class="index_logo" src="./img/logo1.png">
+	<!-- 文字 -->
+		<span>中石油驾图加油卡</span>
+		<span>充值97折+加油98折</span>
+		<button>
+			<a href="buyCard.html">立即办卡<b></b></a>			
+		</button>
+		<button>
+			<a href="pay.html">油卡充值<b></b></a>			
+		</button>
+
+	<!-- 折叠面板，油卡文字说明  -->
+		<ul>
+			<li>
+				<div @click="isShow1=!isShow1">
+					油卡说明
+					<b :class="{ arrowActive:isShow1 }"></b>
+				</div>
+				<div :class="{ active:isShow1 }">
+					<span>**************************************************************</span>
+				</div>
+			</li>
+			<li>
+				<div @click="isShow2=!isShow2">
+					办卡须知
+					<b :class="{ arrowActive:isShow2 }"></b>
+				</div>
+				<div :class="{ active:isShow2 }">
+					<span>**************************************************************</span>
+				</div>
+			</li>
+			<li>
+				<div @click="isShow3=!isShow3">
+					充值须知
+					<b :class="{ arrowActive:isShow3 }"></b>
+				</div>
+				<div :class="{ active:isShow3 }">
+					<span>**************************************************************</span>
+				</div>
+			</li>
+			<li>
+				<div @click="isShow4=!isShow4">
+					挂失须知
+					<b :class="{ arrowActive:isShow4 }"></b>
+				</div>
+				<div :class="{ active:isShow4 }">
+					<span>**************************************************************</span>
+				</div>
+			</li>
+		</ul>
+	</div>>
+
+    <script src="http://cdn.bootcss.com/vue/2.2.0/vue.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

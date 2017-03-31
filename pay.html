@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>油卡充值</title>
+    <link href="css/font.css" rel="stylesheet" >
+    <link href="css/base.css" rel="stylesheet" >
+    <link href="css/responsive.css" rel="stylesheet" >
+    <link href="css/pay.css" rel="stylesheet" >
+</head>
+<body>
+	<div id="pay">
+		<!-- 充值头部 -->
+		<div>
+			<span>油卡充值</span>
+			<a href="buyCard.html">我要办卡</a>
+		</div>
+		<div>
+			<div>
+				<img src="img/logo.png">
+				<input id="cardNum" type="text" placeholder="请输入加油卡号码" />
+			</div>			
+			<div>
+				<span>请选择充值金额</span>
+				<button @click="show10=true,show5=false,show20=false" :class="{ focus:show10 }">
+					<span>{{money10}}</span>
+					<div>
+						售<span>{{pay10}}</span>元
+					</div>					
+				</button>
+				<button @click="show5=true,show10=false,show20=false" :class="{ focus:show5 }">
+					<span>{{money5}}</span>
+					<div>
+						售<span>{{pay5}}</span>元
+					</div>	
+				</button>
+				<button @click="show20=true,show5=false,show10=false" :class="{ focus:show20 }">
+					<span>{{money20}}</span>
+					<div>
+						售<span>{{pay20}}</span>元
+					</div>	
+				</button>
+			</div>
+		</div>
+		<div>
+			<span>
+				中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡
+			</span>
+			<div>
+				<img src="img/icon_service.png">
+				<span>客服 028 83354066</span>
+			</div>
+		</div>
+		<!-- 确认支付   -->
+		<div>
+			<div>
+				<span>{{show10 ? pay10 : (show5 ? pay5 : pay20)}}</span> 元
+			</div>		
+			<span @click="confirm">确认充值</span>
+		</div>
+		<!-- 错误信息提示 -->
+		<div class="wrongmsg" :class="{ msgAppear:msgShow }"></div>
+	</div>
+
+    <script src="http://cdn.bootcss.com/jquery/3.2.0/jquery.js"></script>
+    <script src="http://cdn.bootcss.com/vue/2.2.0/vue.js"></script>
+    <script src="js/pay.js"></script>
+</body>
+</html>

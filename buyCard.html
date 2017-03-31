@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>我要办卡</title>
+    <link href="css/font.css" rel="stylesheet" >
+    <link href="css/base.css" rel="stylesheet" >
+    <link href="css/responsive.css" rel="stylesheet" >
+    <link href="css/buyCard.css" rel="stylesheet" >    
+</head>
+<body>
+	<div id="buyCard">
+		<!-- 购卡首页 -->
+		<div id="newCard" v-show="isShow">
+			<!-- 头部标题 -->
+			<div>
+				<span>我要办卡</span>
+				<a href="pay.html">油卡充值</a>
+			</div>
+			<!-- 办卡金额 张数 -->
+			<div>
+				<span>中石油加油卡</span>
+				<span>持续享受97折充值+98折加油</span>
+				<!-- 表单填写 -->
+				<table id="msg">
+					<tr>
+						<td>预&emsp;&emsp;存</td>
+						<td>
+							<div>
+								<span>500</span>&nbsp;元 / 张
+							</div>						
+						</td>
+						<td>
+							<span>{{price}}</span>&nbsp;元					
+						</td>
+					</tr>
+					<tr>
+						<td>数&emsp;&emsp;量</td>
+						<td>
+							<button @click="num == 1 ? 1 : num--">-</button>
+							<span>{{num}}</span>
+							<button @click="num++">+</button>
+						</td>
+						<td>
+							<span>{{price*num}}</span>&nbsp;元
+						</td>
+					</tr>
+					<tr>
+						<td>顺丰快递</td>
+						<td colspan="2">
+							<span>{{tranfee}}</span>&nbsp;元
+						</td>
+					</tr>
+					<tr>
+						<td>配送地址</td>
+						<td colspan="2" @click="isShow=!isShow">
+							<div>{{ addressDetail == "" ?  '请填写配送地址' : city+area+addressDetail }}</div>
+							<b></b>
+						</td>
+					</tr>
+				</table>
+			<!-- 办卡须知  -->
+				<div>
+					<input type="checkbox" id="checkBox" name="checkBox" checked>				
+					<label for="checkBox"></label>
+					<span>我已阅读并同意</span>
+					<span>《办卡须知》</span>
+				</div>			
+			</div>
+			<div>
+				<span>
+					中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡中石油加油卡
+				</span>
+				<div>
+					<img src="img/icon_service.png">
+					<span>客服 028 83354066</span>
+				</div>
+			</div>
+			<!-- 确认支付   -->
+			<div>
+				<div>
+					<span>{{countNum}}</span> 元
+				</div>		
+				<span @click="paySubmit">确认支付</span>
+			</div>
+		</div>
+					
+		<!-- 配送个人信息及地址填写 -->
+		<div id="addressMsg" v-show="!isShow">
+			<div>
+				<div @click="isShow=!isShow">
+					<img src="img/icon_back.png">
+					<span>返回</span>
+				</div>					
+				<span>配送地址</span>
+			</div>
+			<span></span>
+			<table id="address">
+				<tr>
+					<td>姓&emsp;&emsp;名</td>
+					<td colspan="3">
+						<input id="userName" type="text" placeholder="请输入收卡人姓名" />
+					</td>
+				</tr>
+				<tr>
+					<td>手&emsp;&emsp;机</td>
+					<td colspan="3">
+						<input id="phoneNum" type="text" placeholder="请输入收卡人手机号码" />
+					</td>
+				</tr>
+				<tr>
+					<td>收卡地址</td>
+					<td>四川省</td>
+					<td>
+						<select @click="cityChange">
+							<option v-for="city in cityList">{{ city.name }}</option>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option v-for="area in cityList[cityIndex].areas">{{ area }}</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td colspan="3">
+						<input id="addressInfo" type="text" placeholder="请输入详细地址" />
+					</td>
+				</tr>
+			</table>
+			<span></span>
+			<button @click="submit">确定</button>
+		</div>
+		<!-- 错误信息提示 -->
+		<div class="wrongmsg" :class="{ msgAppear:msgShow }"></div>
+	</div>
+
+    <script src="http://cdn.bootcss.com/jquery/3.2.0/jquery.js"></script>
+    <script src="http://cdn.bootcss.com/vue/2.2.0/vue.js"></script>
+    <script src="js/buyCard.js"></script>
+</body>
+</html>
